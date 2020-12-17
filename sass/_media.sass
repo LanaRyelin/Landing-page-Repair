@@ -21,7 +21,14 @@
             &__element:first-child
                 margin-right: 0
                 margin-bottom: 16px
-
+    .cards
+        justify-content: space-evenly
+@media (max-width: 992px)
+    .slider
+        &__image
+            width: 95%
+    .price__card
+        max-width: 326px
 @media (max-width: 768px)
     .container
         max-width: 580px
@@ -53,6 +60,8 @@
         &-block
             width: 100%
             padding-right: 0
+    .cards
+        justify-content: center
 @media (max-width: 480px)
     .hero
         &-list

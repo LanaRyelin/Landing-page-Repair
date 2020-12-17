@@ -2,34 +2,45 @@
     box-sizing: border-box
 body
     +reg
-    img
-        max-width: 100%
-    .container
-        max-width: 1170px
-        margin: auto
-    .button
-        border-radius: 10px
-        background-color: $main-color
-        border: none
-        padding: 18px 30px
-        &:hover
-            background-color: lighten($main-color, 10%)
-            cursor: pointer
-    .phone
-        display: inline-block
-        color: $text-color
-        text-decoration: none
+img
+    max-width: 100%
+a
+    text-decoration: none
+    color: $text-color
+    display: inline-block
+    +bold
+.container
+    max-width: 1170px
+    margin: auto
+.button
+    border-radius: 10px
+    background-color: $main-color
+    border: none
+    padding: 18px 30px
+    &:hover
+        background-color: lighten($main-color, 10%)
+        cursor: pointer
+    &:focus
+        outline: none 
+.section
+    padding: 90px 0
+    &-title
+        max-width: 500px
+        font-size: 24px
         +bold
-    .section
-        padding: 90px 0
-        &-title
-            font-size: 24px
-            +bold
-        &-subtitle
-            display: block
-            font-size: 16px
-    .input
-        border: 1px solid $border-input
-        padding: 20px 26px
-        font-size: 15px
-        border-radius: 10px
+        text-align: center
+    &-subtitle
+        display: block
+        font-size: 16px
+.input
+    border: 1px solid $border-input
+    padding: 20px 26px
+    font-size: 15px
+    border-radius: 10px
+    &:focus
+        outline: none
+        border: 1px solid $main-color
+.arrows
+    &__left, &__right
+        &:hover
+            cursor: pointer

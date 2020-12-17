@@ -25,55 +25,70 @@ body {
   font-weight: 300;
 }
 
-body img {
+img {
   max-width: 100%;
 }
 
-body .container {
+a {
+  text-decoration: none;
+  color: #333333;
+  display: inline-block;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.container {
   max-width: 1170px;
   margin: auto;
 }
 
-body .button {
+.button {
   border-radius: 10px;
   background-color: #ffd200;
   border: none;
   padding: 18px 30px;
 }
 
-body .button:hover {
+.button:hover {
   background-color: #ffdb33;
   cursor: pointer;
 }
 
-body .phone {
-  display: inline-block;
-  color: #333333;
-  text-decoration: none;
-  font-family: 'Museo Sans Bold', sans-serif;
-  font-weight: 700;
+.button:focus {
+  outline: none;
 }
 
-body .section {
+.section {
   padding: 90px 0;
 }
 
-body .section-title {
+.section-title {
+  max-width: 500px;
   font-size: 24px;
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
+  text-align: center;
 }
 
-body .section-subtitle {
+.section-subtitle {
   display: block;
   font-size: 16px;
 }
 
-body .input {
+.input {
   border: 1px solid #dddddd;
   padding: 20px 26px;
   font-size: 15px;
   border-radius: 10px;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid #ffd200;
+}
+
+.arrows__left:hover, .arrows__right:hover {
+  cursor: pointer;
 }
 
 /*Импорт стилей шапки*/
@@ -226,6 +241,7 @@ body .input {
   max-width: 360px;
   line-height: 35px;
   margin-bottom: 24px;
+  text-align: left;
 }
 
 .offer__subtitle {
@@ -263,6 +279,183 @@ body .input {
   margin-right: 69px;
 }
 
+/*Стили для блока портфолио*/
+.portfolio {
+  background: #f5f5f5 url("../img/portfolio-pattern.jpg") repeat-y center left;
+  background-size: 50%;
+}
+
+.portfolio__title {
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.portfolio__arrows {
+  max-width: 120px;
+  margin: auto;
+  margin-top: 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.portfolio .slider__image {
+  max-width: 380px;
+  margin: auto;
+}
+
+.portfolio .slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
+.portfolio .slick-list {
+  overflow: hidden;
+}
+
+.portfolio .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*Стили для блока с ценами*/
+.price {
+  background-color: #fff;
+}
+
+.price__title {
+  margin: auto;
+  margin-bottom: 58px;
+}
+
+.price__subtitle {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.price__card {
+  margin-bottom: 30px;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #e8e8e8;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card:hover .card__image::before {
+  opacity: 1;
+}
+
+.card__text {
+  padding: 40px;
+}
+
+.card__title {
+  margin-top: 0;
+}
+
+.card__image {
+  position: relative;
+}
+
+.card__image::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffd200), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.card__image img {
+  display: block;
+}
+
+.card__link {
+  position: relative;
+  font-size: 16px;
+}
+
+.card__link:hover::after {
+  height: 12px;
+}
+
+.card__link:after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  z-index: -1;
+  background-color: #ffd200;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/*Стили модального окна*/
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-dialog {
+  position: relative;
+  margin: auto;
+  max-width: 450px;
+  width: 90%;
+  min-width: 200px;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.modal-dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 @media (max-width: 1200px) {
   .container {
     width: 90%;
@@ -296,6 +489,20 @@ body .input {
   .offer .offer-text__element:first-child {
     margin-right: 0;
     margin-bottom: 16px;
+  }
+  .cards {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 992px) {
+  .slider__image {
+    width: 95%;
+  }
+  .price__card {
+    max-width: 326px;
   }
 }
 
@@ -335,6 +542,11 @@ body .input {
   .offer-block {
     width: 100%;
     padding-right: 0;
+  }
+  .cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

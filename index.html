@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,7 +23,7 @@
                         <a href="tel:+7(495)42-251-31" class="phone navbar__phone">+7 (495) 42-251-31</a>
                     </div>
                     <!-- /.navbar__contacts -->
-                    <button class="button navbar__button">Перезвоните мне</button>
+                    <button id="button" class="button navbar__button">Перезвоните мне</button>
                 </div>
                 <!-- /.navbar__info -->
             </div>
@@ -41,19 +42,19 @@
                         <ul class="hero-list">
                             <li class="hero-list__item">
                                 <div class="hero-list__image">
-                                    <img src="img/clock.png" alt="clock">
+                                    <img src="img/hero/clock.png" alt="clock">
                                 </div>
                                 <span class="hero-list__text">Точно соблюдаем сроки</span>
                             </li>
                             <li class="hero-list__item">
                                 <div class="hero-list__image">
-                                    <img src="img/calculator.png" alt="calculator">
+                                    <img src="img/hero/calculator.png" alt="calculator">
                                 </div>
                                 <span class="hero-list__text">Рассчитаем смету на работы и материалы в день обращения</span>
                             </li>
                             <li class="hero-list__item">
                                 <div class="hero-list__image">
-                                    <img src="img/paint-board.png" alt="paint-board">
+                                    <img src="img/hero/paint-board.png" alt="paint-board">
                                 </div>
                                 <span class="hero-list__text">Предложим более 100 вариантов исполнения дизайна Вашего жилья</span>
                             </li>
@@ -61,7 +62,7 @@
                     </div>
                     <!-- /.hero-text -->
                     <div class="hero-image">
-                        <img src="img/hero-image.png" alt="План квартиры">
+                        <img src="img/hero/hero-image.png" alt="План квартиры">
                     </div>
                     <!-- /.hero-image -->
                 </div>
@@ -94,7 +95,132 @@
             <!-- /.container -->
         </section>
         <!-- /.offer -->
+        <section class="section portfolio">
+            <div class="container">
+                <h2 class="section-title portfolio__title">Работая с 2007 года, мы сделали более 500 ремонтов в квартирах и домах</h2>
+                <div class="slider">
+                    <div class="slider__item">
+                        <img class="slider__image"src="img/slider/slider-1.jpg" alt="">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image"src="img/slider/slider-2.jpg" alt="">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image"src="img/slider/slider-3.jpg" alt="">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image"src="img/slider/slider-1.jpg" alt="">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image"src="img/slider/slider-2.jpg" alt="">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image"src="img/slider/slider-3.jpg" alt="">
+                    </div>
+                </div>
+                <!-- /.slider -->
+                <div class="arrows portfolio__arrows">
+                    <div class="arrows__left">
+                        <img src="img/slider/left-arrow.png" alt="">
+                    </div>
+                    <div class="arrows__right">
+                        <img src="img/slider/right-arrow.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.section portfolio -->
+        <section class="section price">
+            <div class="container">
+                <h2 class="section-title price__title">У нас очень гибкая система скидок на&nbsp;комплексные работы!</h2>
+                <span class="section-subtitle price__subtitle">Прайс на наши услуги</span>
+                <div class="cards">
+                    <div class="card price__card animate__animated animate__fadeInLeft wow">
+                        <div class="card__image">
+                            <img src="img/price/bathroom.jpg" alt="">
+                        </div>
+                        <div class="card__text">
+                            <h4 class="card__title">Ремонт ванных комнат и с/у</h4>
+                            <a href="#" class="card__link">Узнать цены</a>
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                    <div class="card price__card animate__animated animate__fadeInDown wow">
+                        <div class="card__image">
+                            <img src="img/price/living.jpg" alt="">
+                        </div>
+                        <div class="card__text">
+                            <h4 class="card__title">Ремонт комнат и квартир</h4>
+                            <a href="#" class="card__link">Узнать цены</a>
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                    <div class="card price__card animate__animated animate__fadeInRight wow">
+                        <div class="card__image">
+                            <img src="img/price/office.jpg" alt="">
+                        </div>
+                        <div class="card__text">
+                            <h4 class="card__title">Отделка офисных помещений</h4>
+                            <a href="#" class="card__link">Узнать цены</a>
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                    <div class="card price__card animate__animated animate__fadeInLeft wow"">
+                        <div class="card__image">
+                            <img src="img/price/buildings.jpg" alt="">
+                        </div>
+                        <div class="card__text">
+                            <h4 class="card__title">Ремонт в новостройках</h4>
+                            <a href="#" class="card__link">Узнать цены</a>
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                    <div class="card price__card animate__animated animate__fadeInUp wow">
+                        <div class="card__image">
+                            <img src="img/price/kitchen.jpg" alt="">
+                        </div>
+                        <div class="card__text">
+                            <h4 class="card__title">Ремонт кухонь</h4>
+                            <a href="#" class="card__link">Узнать цены</a>
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                    <div class="card price__card animate__animated animate__fadeInRight wow">
+                        <div class="card__image">
+                            <img src="img/price/houses.jpg" alt="">
+                        </div>
+                        <div class="card__text">
+                            <h4 class="card__title">Ремонт дач и коттеджей</h4>
+                            <a href="#" class="card__link">Узнать цены</a>
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.cards -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.section price -->
     </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-dialog">
+            <button id="close" class="modal-dialog__close">&times;</button>
+            <h4 class="modal-dialoh__title">Всплывающее окно</h4>
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        // Инициализация билиотеки WOW.js
+        new WOW().init();
+    </script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
