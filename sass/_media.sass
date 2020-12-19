@@ -23,16 +23,43 @@
                 margin-bottom: 16px
     .cards
         justify-content: space-evenly
+    .brif
+        &__form
+            padding-left: 30px
+    .interview
+        padding-right: 30px
+        &__title
+            font-size: 20px
+            margin-bottom: 15px
+        &__subtitle
+            margin-bottom: 30px
+        &-list
+            &__text
+                font-size: 14px
+                max-width: 300px
+    .form
+        &__title
+            font-size: 20px
+            margin-bottom: 18px
+        &__subtitle
+            margin-bottom: 30px
+
 @media (max-width: 992px)
     .slider
         &__image
             width: 95%
     .price__card
         max-width: 326px
+    .interview-list
+            &__text
+                max-width: 250px
+
 @media (max-width: 768px)
     .container
         max-width: 580px
         width: 90%
+    .section
+        padding: 60px 0
     .navbar
         &__contacts
             display: none
@@ -54,7 +81,7 @@
             &__item
                 margin-bottom: 20px
             &__text
-                font-size: 12px
+                font-size: 14px
     .offer
         background: #ffffff
         &-block
@@ -62,6 +89,14 @@
             padding-right: 0
     .cards
         justify-content: center
+    .brif
+        background-position: top center, center bottom
+        background-size: 100% 50%, cover
+        background-repeat: repeat-x, no-repeat
+        &-block
+            flex-direction: column
+        &__form
+            margin-top: 100px
 @media (max-width: 480px)
     .hero
         &-list

@@ -87,6 +87,14 @@ a {
   border: 1px solid #ffd200;
 }
 
+.input.error {
+  border: 1px solid #f00;
+}
+
+.input.valid {
+  border: 1px solid #0f0;
+}
+
 .arrows__left:hover, .arrows__right:hover {
   cursor: pointer;
 }
@@ -251,7 +259,6 @@ a {
 
 .offer__input {
   width: 240px;
-  margin-bottom: 30px;
 }
 
 .offer__input:first-child {
@@ -261,6 +268,7 @@ a {
 .offer__button {
   width: 100%;
   min-height: 70px;
+  margin-top: 30px;
 }
 
 .offer .offer-text {
@@ -392,6 +400,7 @@ a {
 .card__link {
   position: relative;
   font-size: 16px;
+  z-index: 1;
 }
 
 .card__link:hover::after {
@@ -421,6 +430,114 @@ a {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+/*Стили для 5 шагов для ремонта*/
+/*Стили для блока бриф*/
+.brif {
+  background-image: url("../img/brif/brif-color_bg.jpg"), url("../img/brif/brif-bg.jpg");
+  background-position: left center, right center;
+  background-size: 50%, contain;
+  background-repeat: repeat-y, no-repeat;
+}
+
+.brif-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.brif__interview {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.brif__form {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-left: 200px;
+  text-align: center;
+}
+
+.brif__input {
+  width: 100%;
+  max-width: 370px;
+  margin-bottom: 15px;
+}
+
+.brif__button {
+  height: 70px;
+  width: 100%;
+  max-width: 370px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.interview {
+  padding-right: 70px;
+}
+
+.interview__title {
+  margin-bottom: 50px;
+  font-size: 22px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.interview__subtitle {
+  display: block;
+  margin-bottom: 95px;
+  font-size: 16px;
+}
+
+.interview-list {
+  list-style: none;
+  padding: 0;
+}
+
+.interview-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.interview-list__text {
+  max-width: 400px;
+}
+
+.interview-list__counter {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 30px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 35px;
+  border: 2px solid #333333;
+  border-radius: 50%;
+}
+
+.form__title {
+  margin-bottom: 50px;
+  font-size: 22px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.form__subtitle {
+  display: block;
+  margin-bottom: 95px;
+  font-size: 16px;
+}
+
+.form__description {
+  display: block;
 }
 
 /*Стили модального окна*/
@@ -495,6 +612,30 @@ a {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .brif__form {
+    padding-left: 30px;
+  }
+  .interview {
+    padding-right: 30px;
+  }
+  .interview__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .interview__subtitle {
+    margin-bottom: 30px;
+  }
+  .interview-list__text {
+    font-size: 14px;
+    max-width: 300px;
+  }
+  .form__title {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+  .form__subtitle {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -504,12 +645,18 @@ a {
   .price__card {
     max-width: 326px;
   }
+  .interview-list__text {
+    max-width: 250px;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     max-width: 580px;
     width: 90%;
+  }
+  .section {
+    padding: 60px 0;
   }
   .navbar__contacts {
     display: none;
@@ -534,7 +681,7 @@ a {
     margin-bottom: 20px;
   }
   .hero-list__text {
-    font-size: 12px;
+    font-size: 14px;
   }
   .offer {
     background: #ffffff;
@@ -547,6 +694,20 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .brif {
+    background-position: top center, center bottom;
+    background-size: 100% 50%, cover;
+    background-repeat: repeat-x, no-repeat;
+  }
+  .brif-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .brif__form {
+    margin-top: 100px;
   }
 }
 
