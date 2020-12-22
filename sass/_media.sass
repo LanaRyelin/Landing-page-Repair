@@ -1,14 +1,17 @@
 @media (max-width: 1200px)
     .container
         width: 90%
-        // padding: 0 20px
+    /*Стили для главного экрана*/
     .hero
         &-block
-            flex-direction: column
+            align-items: center
         &-list
             margin-bottom: 44px
         &-text
-            padding-right: 10px
+            padding-right: 35px
+            &__title
+                font-size: 30px
+    /*Стили для блока offer*/
     .offer
         background-size: cover
         &__input
@@ -21,6 +24,7 @@
             &__element:first-child
                 margin-right: 0
                 margin-bottom: 16px
+    /*Стили для блока с ценами*/
     .cards
         justify-content: space-evenly
     .brif
@@ -43,16 +47,57 @@
             margin-bottom: 18px
         &__subtitle
             margin-bottom: 30px
-
+    /*Стили для блока steps*/
+    .steps-block
+        &__arrow
+            display: none
+    .step
+        margin-right: 15px
+    /*Стили для блока support*/
+    .support-text
+        &__title
+            font-size: 26px
+            line-height: 34px
+            padding: 30px 0px 40px 0px
+    .support-block
+        flex-wrap: wrap
+        justify-content: space-evenly
+        &__text
+            padding: 25px 40px 0px 25px
+        &__item
+            width: 320px
+            height: 355px
+            margin-left: 5px
+            margin-right: 5px
+    /*Стили для подвала*/
+    .contacts
+        padding-left: 130px
 @media (max-width: 992px)
+    /*Стили для главного экрана*/
+    .hero
+        &-block
+            flex-direction: column
+            align-items: center
+    /*Стили для блока портфолио*/
     .slider
         &__image
             width: 95%
+    /*Стили для блока с ценами*/
     .price__card
         max-width: 326px
+    /*Стили для блока бриф*/
+    .brif
+        background-size: 50%, cover
     .interview-list
             &__text
                 max-width: 250px
+    /*Стили для подвала*/
+    .contacts
+        padding-top: 70px
+        padding-left: 70px
+        &__title
+            margin-bottom: 60px
+            font-size: 20px
 
 @media (max-width: 768px)
     .container
@@ -60,14 +105,16 @@
         width: 90%
     .section
         padding: 60px 0
+    /*Стили для шапки */
     .navbar
         &__contacts
             display: none
         &__button
-            font-size: 12px
+            font-size: 14px
             padding: 15px 26px
         &__logo
             width: 90px
+    /*Стили для главного экрана*/
     .hero
         &-text
             &__title
@@ -82,13 +129,16 @@
                 margin-bottom: 20px
             &__text
                 font-size: 14px
+    /*Стили для блока offer*/
     .offer
         background: #ffffff
         &-block
             width: 100%
             padding-right: 0
+    /*Стили для блока с ценами*/
     .cards
         justify-content: center
+    /*Стили для блока бриф*/
     .brif
         background-position: top center, center bottom
         background-size: 100% 50%, cover
@@ -97,8 +147,42 @@
             flex-direction: column
         &__form
             margin-top: 100px
+    /*Стили для блока support*/
+    .support-text
+        &__title
+            font-size: 22px
+            line-height: 28px
+            padding: 20px 5px 25px 5px
+    .support-block
+        &__text
+            font-size: 14px
+        &__item
+            max-width: 272px
+            height: 300px
+    /*Стили для подвала*/
+    .footer
+        display: flex
+        flex-direction: column
+    .contacts
+        flex-basis: 100%
+    .map
+        order: 2
+        position: static
+        width: 100%
+        max-height: 450px
+        overflow: hidden
 @media (max-width: 480px)
+    /*Стили для главного экрана*/
     .hero
         &-list
             &__text
                 max-width: 220px
+    /*Стили для блока support*/
+    .support-text
+        &__title
+            font-size: 18px
+            line-height: 22px
+    /*Стили для подвала*/
+    .contacts
+        padding-top: 60px
+        padding-left: 30px
