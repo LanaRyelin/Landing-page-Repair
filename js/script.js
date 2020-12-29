@@ -1,7 +1,16 @@
-// Инициализация билиотеки WOW.js
-new WOW().init();
-
 $(document).ready(function() {
+
+    //Анимация карточек
+    function viewport(item) {
+        $(item).viewportChecker({
+            callbackFunction:function(){
+                $(item).toggleClass('fadeInUp');
+            }
+        });
+    };
+    for(i=1; i<=6; i++) {
+        viewport('#cards__item-'+i);
+    };
 
     // Валидация формы
     function validateForm(form) {
