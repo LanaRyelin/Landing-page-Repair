@@ -38,17 +38,26 @@ $(document).ready(function() {
     $('.phone').mask('+7 (999) 999-99-99');
 
     // Модальное окно
-    var button = $('#button');
-    var modal = $('#modal');
-    var close = $('#close');
+    // var button = $('#button');
+    // var modal = $('#modal');
+    // var close = $('#close');
 
-    button.on('click', function() {
-        modal.addClass('modal_active');
-    });
-
-    close.on('click', function() {
-        modal.removeClass('modal_active');
-    });
+    // Модальное окно по цене
+    // var buttonPrice = $('.card__link');
+    // var modalPrice = $('#modal-price');
+    // var closePrice = $('#close-price');
+    
+    // function modalActive(button, modal, close) {
+    //     button.on('click', function() {
+    //         modal.addClass('modal_active');
+    //     });
+    
+    //     close.on('click', function() {
+    //         modal.removeClass('modal_active');
+    //     });
+    // };
+    // modalActive(button, modal, close);
+    // modalActive(buttonPrice, modalPrice, closePrice);
 
     // Слайдер
     $('.slider').slick({
@@ -74,4 +83,20 @@ $(document).ready(function() {
             }
         ]
     });
+
+    // Кнопка наверх
+    $('#scroll_up').click(function() {
+        if($(document).scrollTop() > 0) {
+            $('html, body').animate({scrollTop:0}, 800);
+        }
+    });
+
+    $(document).scroll(function() {
+        if($(document).scrollTop() > 1000) {
+            $('#scroll_up').fadeIn();
+        } else {
+            $('#scroll_up').fadeOut();
+        }
+    });
+
 });

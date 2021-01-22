@@ -25,7 +25,7 @@
                         <a href="tel:+7(495)42-251-31" class="phone navbar__phone">+7 (495) 42-251-31</a>
                     </div>
                     <!-- /.navbar__contacts -->
-                    <button id="button" class="button navbar__button" onclick="ym(70746325, 'reachGoal', 'button'); return true;">Перезвоните мне</button>
+                    <a href="#modal-phone" id="button" class="button navbar__button" onclick="ym(70746325, 'reachGoal', 'button'); return true;">Перезвоните мне</a>
                 </div>
                 <!-- /.navbar__info -->
             </div>
@@ -144,7 +144,7 @@
                         </div>
                         <div class="card__text">
                             <h4 class="card__title">Ремонт ванных комнат и с/у</h4>
-                            <a href="#" class="card__link">Узнать цены</a>
+                            <a href="#modal-price" class="card__link">Узнать цены</a>
                         </div>
                     </div>
                     <!-- /.card -->
@@ -154,7 +154,7 @@
                         </div>
                         <div class="card__text">
                             <h4 class="card__title">Ремонт комнат и квартир</h4>
-                            <a href="#" class="card__link">Узнать цены</a>
+                            <a href="#modal-price" class="card__link">Узнать цены</a>
                         </div>
                     </div>
                     <!-- /.card -->
@@ -164,7 +164,7 @@
                         </div>
                         <div class="card__text">
                             <h4 class="card__title">Отделка офисных помещений</h4>
-                            <a href="#" class="card__link">Узнать цены</a>
+                            <a href="#modal-price" class="card__link">Узнать цены</a>
                         </div>
                     </div>
                     <!-- /.card -->
@@ -174,7 +174,7 @@
                         </div>
                         <div class="card__text">
                             <h4 class="card__title">Ремонт в новостройках</h4>
-                            <a href="#" class="card__link">Узнать цены</a>
+                            <a href="#modal-price" class="card__link">Узнать цены</a>
                         </div>
                     </div>
                     <!-- /.card -->
@@ -184,7 +184,7 @@
                         </div>
                         <div class="card__text">
                             <h4 class="card__title">Ремонт кухонь</h4>
-                            <a href="#" class="card__link">Узнать цены</a>
+                            <a href="#modal-price" class="card__link">Узнать цены</a>
                         </div>
                     </div>
                     <!-- /.card -->
@@ -194,7 +194,7 @@
                         </div>
                         <div class="card__text">
                             <h4 class="card__title">Ремонт дач и коттеджей</h4>
-                            <a href="#" class="card__link">Узнать цены</a>
+                            <a href="#modal-price" class="card__link">Узнать цены</a>
                         </div>
                     </div>
                     <!-- /.card -->
@@ -373,20 +373,43 @@
     </footer>
     <!-- /.footer section -->
 
-    <div id="modal" class="modal">
-        <div class="modal-dialog">
-            <button id="close" class="modal-dialog__close">&times;</button>
-            <h2 class="modal-dialog__title">Не нашли, что искали?</h2>
-            <h3 class="modal-dialog__subtitle">Закажите обрытный звонок!</h3>
-            <span class="modal-dialog__text">Наш менеджер перезвонит Вам<br>в течение 5&nbsp;минут</span>
-            <form action="#" class="form modal-form" id="modal-form">
-                <input type="tel" name="phone" class="input modal-form__input phone" id="modal-form__input" placeholder="Ваш телефон">
-                <button class="button modal-form__button">Позвоните мне</button>
-            </form>
+    <div id="modal-phone" class="modal">
+        <div class="modal-body">
+            <a href="##" class="modal-area"></a>
+            <div class="modal-dialog modal-dialog__animate-phone">
+                <a href="##" class="modal-dialog__close">&times;</a>
+                <h2 class="modal-dialog__title">Не нашли, что искали?</h2>
+                <h3 class="modal-dialog__subtitle">Закажите обрытный звонок!</h3>
+                <span class="modal-dialog__text">Наш менеджер перезвонит Вам<br>в течение 5&nbsp;минут</span>
+                <form action="#" class="form modal-form" id="modal-form">
+                    <input type="tel" name="phone" class="input modal-form__input phone" id="modal-form__input" placeholder="Ваш телефон">
+                    <button class="button modal-form__button">Позвоните мне</button>
+                </form>
+            </div>
+            <!-- /.modal-dialog -->
         </div>
-        <!-- /.modal-dialog -->
     </div>
-    <!-- /.modal -->
+    <!-- /.modal-phone -->
+    <div id="modal-price" class="modal">
+        <div class="modal-body">
+            <a href="##" class="modal-area"></a>
+            <div class="modal-dialog modal-dialog__animate-price">
+                <a href="##" class="modal-dialog__close">&times;</a>
+                <h2 class="modal-dialog__title">Узнайте точную стоимость
+                    ремонта по телефону!</h2>
+                <h3 class="modal-dialog__subtitle">Закажите обрытный звонок!</h3>
+                <span class="modal-dialog__text">Наш менеджер перезвонит Вам<br>в течение 5&nbsp;минут</span>
+                <form action="#" class="form modal-form" id="modal-form">
+                    <input type="tel" name="phone" class="input modal-form__input phone" id="modal-form__input" placeholder="Ваш телефон">
+                    <button class="button modal-form__button">Узнать стоимость</button>
+                </form>
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+    </div>
+    <!-- /.modal-price -->
+    <div id="scroll_up" class="scroll_up">Наверх </div>
+
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/slick.min.js"></script>
